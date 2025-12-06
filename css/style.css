@@ -82,7 +82,7 @@ h1 {
   text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
 }
 
-/*  RID PERSONAJES */
+/*  GRID PERSONAJES */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -231,17 +231,6 @@ h1 {
   margin-left: 2rem;
 }
 
-@media (min-width: 768px) {
-  .about-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about-title {
-    grid-column: 1 / -1;
-  }
-}
-
-
 /* CONTACTO */
 .contacto {
   text-align: center;
@@ -306,36 +295,69 @@ footer a:hover {
   color: #fff;
 }
 
-/* ===============================
-   Grid Responsive (About Page)
-   =============================== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* 📱 Mobile: 1 columna */
-  gap: 1.5rem;
-  padding: 2rem;
-}
-
-.about-card {
-  background-color: #111;
-  border: 1px solid #444;
-  border-radius: 10px;
-  padding: 1.5rem;
-  color: #f0f0f0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-/* Tablet (min-width: 600px) */
-@media (min-width: 600px) {
-  .about-grid {
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Desktop (min-width: 1024px) */
 @media (min-width: 1024px) {
-  .about-grid {
+  .grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    margin-bottom: 0;
   }
 }
 
+/* ===============================
+   Cards PERSONAJES
+   =============================== */
+.personaje {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.personaje:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(203, 161, 53, 0.4);
+}
+
+.personaje img {
+  width: 100%;
+  height: 280px;           
+  object-fit: cover;       
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.personaje h3 {
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.personaje p {
+  color: #ddd;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+/* Destacar casa si existe */
+.personaje p:last-child {
+  font-weight: bold;
+  color: var(--accent);
+}

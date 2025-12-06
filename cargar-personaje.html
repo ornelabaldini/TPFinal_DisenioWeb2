@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargar Personaje | GOT</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <img src="/img/logo_got.png" class="logo" />
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="about.html">Sobre Nosotros</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="cargar-personaje.html" class="active">Cargar personaje</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="contacto">
+  <h1>⚔️ Cargar Personaje</h1>
+
+  <form id="formPersonaje">
+    <label>Nombre *</label>
+    <input type="text" id="nombre" required>
+
+    <label>Título *</label>
+    <input type="text" id="titulo" required>
+
+    <label>URL de Imagen *</label>
+    <input type="url" id="imagen" required>
+
+    <label>Casa *</label>
+    <input type="text" id="casa" placeholder="Stark, Lannister, Targaryen..." required>
+
+    <button type="submit">Guardar Personaje</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 - Luján, Ornela y Gonzalo</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
